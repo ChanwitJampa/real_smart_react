@@ -64,3 +64,12 @@
   color: red;
   margin-top: 10px;
 }
+@media (max-width: 600px) {
+  .login-form {
+      padding: 15px;
+  }
+
+  input, button {
+      font-size: 16px;
+  }
+}

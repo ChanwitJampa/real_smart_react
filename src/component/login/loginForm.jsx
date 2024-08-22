@@ -1,10 +1,10 @@
-// src/LoginForm.js
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import './LoginForm.css'; // import your CSS
 
 const schema = yup.object().shape({
     username: yup.string()
@@ -13,7 +13,7 @@ const schema = yup.object().shape({
             return yup.string().email('Invalid email format').isValidSync(value) || 
                    yup.string().matches(/^\d{10}$/, 'Invalid phone number format').isValidSync(value);
         }),
-    password: yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+    password: yup.string().min(3, 'Password must be at least 6 characters').required('Password is required'),
 });
 
 const LoginForm = () => {
