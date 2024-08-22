@@ -1,5 +1,5 @@
-
-.form-container {
+/* Base styles (Desktop) */
+.register-form {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -8,29 +8,29 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.form-container h2 {
+.register-form h1 {
     text-align: center;
     margin-bottom: 20px;
 }
 
-.form-container div {
+.register-form div {
     margin-bottom: 15px;
 }
 
-.form-container label {
+.register-form label {
     display: block;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.form-container input {
+.register-form input {
     width: 100%;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
 }
 
-.form-container button {
+.register-form button {
     width: 100%;
     padding: 10px;
     background-color: #007bff;
@@ -41,132 +41,132 @@
     font-size: 16px;
 }
 
-.form-container button:hover {
+.register-form button:hover {
     background-color: #0056b3;
 }
 
-.form-container .error {
+.register-form .error {
     color: red;
     font-size: 14px;
     text-align: center;
 }
 
-
+/* Mobile screens (Small devices) */
 @media (max-width: 600px) {
-    .form-container {
+    .register-form {
         padding: 15px;
     }
 
-    .form-container h2 {
+    .register-form h1 {
         font-size: 1.5em;
         margin-bottom: 15px;
     }
 
-    .form-container label {
+    .register-form label {
         font-size: 14px;
     }
 
-    .form-container input {
+    .register-form input {
         padding: 8px;
         font-size: 14px;
     }
 
-    .form-container button {
+    .register-form button {
         padding: 12px;
         font-size: 15px;
     }
 
-    .form-container .error {
+    .register-form .error {
         font-size: 12px;
     }
 }
 
 
 @media (min-width: 601px) and (max-width: 900px) {
-    .form-container {
+    .register-form {
         padding: 18px;
     }
 
-    .form-container h2 {
+    .register-form h1 {
         font-size: 1.6em;
         margin-bottom: 18px;
     }
 
-    .form-container label {
+    .register-form label {
         font-size: 15px;
     }
 
-    .form-container input {
+    .register-form input {
         padding: 9px;
         font-size: 15px;
     }
 
-    .form-container button {
+    .register-form button {
         padding: 11px;
         font-size: 16px;
     }
 
-    .form-container .error {
+    .register-form .error {
         font-size: 13px;
     }
 }
 
 
 @media (min-width: 901px) and (max-width: 1200px) {
-    .form-container {
+    .register-form {
         padding: 20px;
     }
 
-    .form-container h2 {
+    .register-form h1 {
         font-size: 1.8em;
         margin-bottom: 20px;
     }
 
-    .form-container label {
+    .register-form label {
         font-size: 16px;
     }
 
-    .form-container input {
+    .register-form input {
         padding: 10px;
         font-size: 16px;
     }
 
-    .form-container button {
+    .register-form button {
         padding: 12px;
         font-size: 17px;
     }
 
-    .form-container .error {
+    .register-form .error {
         font-size: 14px;
     }
 }
 
 
 @media (min-width: 1201px) {
-    .form-container {
+    .register-form {
         padding: 20px;
     }
 
-    .form-container h2 {
+    .register-form h1 {
         font-size: 2em;
         margin-bottom: 25px;
     }
 
-    .form-container label {
+    .register-form label {
         font-size: 18px;
     }
 
-    .form-container input {
+    .register-form input {
         padding: 12px;
         font-size: 18px;
     }
 
-    .form-container button {
+    .register-form button {
         padding: 14px;
         font-size: 18px;
     }
 
-    .form-container .error {
+    .register-form .error {
         font-size: 15px;
     }
 }

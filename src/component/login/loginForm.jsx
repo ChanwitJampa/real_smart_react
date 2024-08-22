@@ -4,16 +4,16 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './LoginForm.css'; // import your CSS
+import './loginForm.css'; // Import the CSS file
 
 const schema = yup.object().shape({
     username: yup.string()
         .required('Email or phone number is required')
         .test('is-valid', 'Invalid email or phone number', value => {
-            return yup.string().email('Invalid email format').isValidSync(value) || 
-                   yup.string().matches(/^\d{10}$/, 'Invalid phone number format').isValidSync(value);
+            return yup.string().email('Invalid email format').isValidSync(value) ||
+                yup.string().matches(/^\d{10}$/, 'Invalid phone number format').isValidSync(value);
         }),
-    password: yup.string().min(3, 'Password must be at least 6 characters').required('Password is required'),
+    password: yup.string().min(3, 'Password must be at least 3 characters').required('Password is required'),
 });
 
 const LoginForm = () => {
@@ -27,7 +27,6 @@ const LoginForm = () => {
         try {
             const response = await axios.post('http://localhost:5000/api/login', data);
             console.log('Login successful:', response.data);
-            // Redirect to success page
             navigate('/success');
         } catch (error) {
             console.error('Login failed:', error.response ? error.response.data : error.message);
@@ -36,7 +35,7 @@ const LoginForm = () => {
     };
 
     return (
-        <div className="login-form">
+        <div className="form-container">
             <h2>Login</h2>
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
@@ -46,7 +45,7 @@ const LoginForm = () => {
                         type="text"
                         {...register('username')}
                     />
-                    {errors.username && <p>{errors.username.message}</p>}
+                    {errors.username && <p className="error">{errors.username.message}</p>}
                 </div>
 
                 <div>
@@ -56,12 +55,19 @@ const LoginForm = () => {
                         type="password"
                         {...register('password')}
                     />
-                    {errors.password && <p>{errors.password.message}</p>}
+                    {errors.password && <p className="error">{errors.password.message}</p>}
                 </div>
 
                 {errorMessage && <p className="error">{errorMessage}</p>}
 
                 <button type="submit">Login</button>
+
+                <div className="register">
+                    <button type="button" onClick={() => navigate('/register')}>
+                        Go to Register
+                    </button>
+                </div>
+
             </form>
         </div>
     );
