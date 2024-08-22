@@ -25,7 +25,7 @@ const LoginForm = () => {
 
     const onSubmit = async (data) => {
         try {
-            const response = await axios.post('http://localhost:5000/api/login', data);
+            const response = await axios.post('https://real-smart-nodejs.onrender.com/api/login', data);
             console.log('Login successful:', response.data);
             navigate('/success');
         } catch (error) {

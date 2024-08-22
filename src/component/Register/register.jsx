@@ -30,7 +30,7 @@ const Register = () => {
 
     const onSubmit = async (data) => {
         try {
-            await axios.post('http://localhost:5000/api/users', data);
+            await axios.post('https://real-smart-nodejs.onrender.com/api/users', data);
             alert('Registration successful!');
             navigate('/'); 
         } catch (error) {
