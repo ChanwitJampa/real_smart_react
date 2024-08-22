@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers/yup';
 import * as yup from 'yup';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import './Register.css'; // Import your CSS
+import './register.css'; 
 
 const schema = yup.object().shape({
     name: yup.string().required('Name is required'),
